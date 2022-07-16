@@ -1,0 +1,15 @@
+@use '../abstracts' as a;
+
+.nav {
+  width: 36.5rem;
+  &__list {
+    @include a.flex-row;
+    justify-content: space-between;
+    color: a.$cl-nav-100;
+    font-size: a.$fs-500;
+
+    &>li:hover {
+      color: a.$cl-accent-100;
+    }
+  }
+}

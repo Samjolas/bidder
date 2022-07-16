@@ -1,0 +1,38 @@
+@use '../abstracts' as a;
+
+.heading {
+  &__main {
+    font-size: a.$fs-900;
+    color: a.$cl-accent-100;
+    font-weight: a.$fw-bold;
+    &--imp {
+      color: a.$cl-accent-400;
+    }
+  }
+  &__sub {
+    font-size: a.$fs-400;
+    color: a.$cl-primary-100;
+    font-weight: a.$fw-semibold;
+  }
+  &__title {
+    font-size: a.$fs-800;
+    color: a.$cl-accent-100;
+    font-weight: a.$fw-semibold;
+    margin-bottom: 2rem;
+    &--imp {
+      color: a.$cl-accent-400;
+    }
+  }
+  &__sub-title {
+    font-size: a.$fs-500;
+    color: a.$cl-primary-100;
+    font-weight: a.$fw-regular;
+    margin-bottom: 6.6rem;
+  }
+  &__nft {
+    font-size: a.$fs-700;
+    font-weight: a.$fw-semibold;
+    color: a.$cl-accent-100;
+    margin: 2.4rem 0 4rem 0;
+  }
+}

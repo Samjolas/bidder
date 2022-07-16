@@ -1,0 +1,177 @@
+@use '../abstracts' as a;
+
+section {
+  padding: 6rem 5.6rem;
+}
+.container {
+  &__flex {
+    @include a.flex-row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__flex-c {
+    @include a.flex-column;
+  }
+  &__grid {
+    @include a.grid-2;
+  }
+}
+.hero {
+  &__text {
+    padding-top: 6rem;
+    display: grid;
+    gap: 4.8rem;
+  }
+  &__fig {
+    position: relative;
+  }
+  &__img {
+    position: absolute;
+    width: 75%;
+    right: 0;
+    bottom: 0;
+  }
+  &__button {
+    display: flex;
+    gap: 3.2rem;
+  }
+  &__coin {
+    @include a.flex-row;
+    gap: 6rem;
+  }
+  &__icon-div {
+    @include a.flex-row;
+    align-items: center;
+    color: a.$cl-primary-100;
+    font-size: a.$fs-600;
+    font-weight: a.$fw-regular;
+    gap: 1.2rem;
+    
+  }
+}
+.market {
+  &__des {
+    margin: auto;
+    text-align: center;    
+  }
+  &__button {
+    @include a.flex-row;
+    gap: 3.2rem;
+    &>.btn {
+      font-size: 1.6rem;
+    }
+  }
+  &__sales {
+    @include a.grid-3;
+    gap: 3.2rem;
+    margin: 14rem 0;
+  }
+  &__nft {
+    padding: 2.4rem 1.8rem;
+    border: 1px solid hsl(0, 1%, 43%);
+    border-radius: 2rem;
+  }
+  &__bid {
+    @include a.flex-row;
+    justify-content: space-between;
+  }
+
+  &__details {
+    @include a.flex-column;
+    justify-content: space-between;
+  }
+}
+
+.sell {
+  &__heading {
+    text-align: center;
+    margin-bottom: 7.5rem;
+  }
+  &__div {
+    @include a.grid-3;
+    gap: 2.2rem;
+  }
+  &__box {
+    padding: 2.8rem;
+    background: a.$cl-bg-900;
+    @include a.in-box;
+    &::before {
+      @include a.border;
+    }
+  }
+  &__icon {
+    width: 6rem;
+    height: 6rem;
+    padding: 1.8rem;
+    border-radius: .7rem;
+    margin-bottom: -2rem;
+    &--set {
+      background: a.$cl-bg-300;
+    }
+    &--create {
+      background: a.$cl-bg-200;
+    }
+    &--add {
+      background: a.$cl-bg-100;
+    }
+  }
+  &__des {
+    font-weight: a.$fw-semibold;
+    font-size: 1.6rem;
+    color: a.$cl-accent-100;
+    margin-top: -3rem;
+  }
+}
+.seller {
+  &__heading {
+    text-align: center;
+    margin-bottom: 7.5rem;
+  }
+  &__div {
+    @include a.grid-3;
+  }
+
+  &__box {
+    @include a.flex-row;
+    padding: 3.7rem 2.4rem;
+    width: 40rem;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    background: a.$cl-bg-900;
+    @include a.in-box;
+    &::before {
+      @include a.border;
+    }
+  }
+
+  &__pic {
+    border-radius: 50%;
+    width: 100; height: 100%;
+    &--blue {
+      background: a.$cl-bg-200;
+    }
+    &--brown {
+      background: a.$cl-bg-100;
+    }
+    &--yellow {
+      background: a.$cl-bg-500;
+    }
+    &--pink {
+      background: a.$cl-bg-300;
+    }
+    &--green {
+      background: a.$cl-bg-600;
+    }
+  }
+  &__name {
+    font-size: a.$fs-700;
+    font-weight: a.$fw-semibold;
+    color: a.$cl-accent-100;
+    
+  }
+  &__price {
+    font-size: a.$fs-300;
+    font-weight: a.$fw-semibold;
+    color: a.$cl-primary-100;
+  }
+}

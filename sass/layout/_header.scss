@@ -1,0 +1,36 @@
+@use '../abstracts' as a;
+
+header {
+  padding: 2.4rem 5.6rem;
+}
+
+.logo {
+  @include a.flex-row;
+  align-items: center;
+  text-decoration: none;
+
+  &__text {
+    font-size: a.$fs-500;
+    color: transparent;
+    background: linear-gradient(180deg, a.$cl-gr-100 0%, a.$cl-gr-150 56.67%, a.$cl-bg-950 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+}
+.cart {
+  padding: 1rem;
+  margin-right: 3.2rem;
+  font-size: 1.8rem;
+  background: a.$cl-bg-900;
+  border-radius: 50%;
+  border: .2rem solid transparent; 
+  position: relative;
+  &::before {
+    @include a.border;
+    margin: -.5rem; 
+  }
+}
+.button {
+  @include a.flex-row;
+  align-items: center;
+}

@@ -1,0 +1,21 @@
+@use '../abstracts' as a;
+.btn {
+  width: 18.8rem;
+  height: 6.127rem;
+  color: a.$cl-accent-100;
+  font-weight: a.$fw-bold;
+  font-size: a.$fs-400;
+  @include a.in-box;
+  &::before {
+    @include a.border;
+  }
+  &--main {
+    background: linear-gradient(95.39deg, a.$cl-gr-200 1.54%, a.$cl-gr-350 93.12%);
+  }
+  &--sub {
+    background: a.$cl-bg-900;
+  }
+}
+
+
+

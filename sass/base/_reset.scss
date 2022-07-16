@@ -1,0 +1,70 @@
+@use '../abstracts' as a;
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* reset default rem from 16px to 10px */
+html {
+  font-size: 62.5%;
+}
+
+/*  default body style */
+body {
+  font-family: a.$ff;
+  font-style: normal;
+  font-weight: a.$fw-semibold;
+  font-size: a.$fs-300;
+  text-rendering: optimizeSpeed;
+  line-height: 1.35;
+  letter-spacing: 0.01em;
+  background: a.$bg-cl;
+  color: a.$cl-primary-100;
+}
+
+/* Set core body defaults 
+html,
+body {
+  height: 100%;
+}
+*/
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* link style removed */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* headings whould be Capitalise */ 
+h1, h2, h3, h4, h5, h6 {
+  text-transform: capitalize;
+}
+
+@media screen and (min-width: 1440px) {
+  
+}
+
