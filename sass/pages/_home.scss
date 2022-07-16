@@ -1,6 +1,6 @@
 @use '../abstracts' as a;
 
-section {
+section,footer {
   padding: 6rem 5.6rem;
 }
 .container {
@@ -129,12 +129,14 @@ section {
   }
   &__div {
     @include a.grid-3;
+    padding: auto;
+    margin-right: -2rem;
   }
 
   &__box {
     @include a.flex-row;
     padding: 3.7rem 2.4rem;
-    width: 40rem;
+    width: 95%;
     gap: 2rem;
     margin-bottom: 2rem;
     background: a.$cl-bg-900;

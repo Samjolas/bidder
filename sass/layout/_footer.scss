@@ -1,0 +1,21 @@
+@use '../abstracts' as a;
+
+.footer {
+  color: a.$cl-accent-100;
+
+  &>div {
+    flex: 2;
+  }
+  &__details {
+    flex: 1;
+    &>ul>li {
+      list-style-type: none;
+      font-size: 1.6rem; margin-bottom: 1.6rem;
+    }
+  }
+
+  &__heading {
+    font-size: a.$fs-500;
+    margin-bottom: 3rem;
+  }
+}
