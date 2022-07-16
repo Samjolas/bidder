@@ -3,11 +3,13 @@
 section,footer {
   padding: 6rem 5.6rem;
 }
+.center {
+  justify-content: space-between;
+  align-items: center;
+}
 .container {
   &__flex {
     @include a.flex-row;
-    justify-content: space-between;
-    align-items: center;
   }
   &__flex-c {
     @include a.flex-column;
