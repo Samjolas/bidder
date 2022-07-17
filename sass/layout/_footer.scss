@@ -1,8 +1,8 @@
 @use '../abstracts' as a;
 
 .footer {
-  color: a.$cl-accent-100; 
   &__border {
+    @include a.flex-row;
     padding: 8rem 0;
     gap: 2rem;
     border-top: 1px solid a.$cl-gr-500; 
@@ -18,7 +18,6 @@
       font-size: 1.6rem; margin-bottom: 1.6rem;
       cursor: pointer;
       transition: all .3s;
-
       &:hover {
         transform: translateY(-.15rem);
       }
@@ -28,7 +27,6 @@
     font-size: a.$fs-500;
     margin-bottom: 3rem;
   }
-
   &__form {
     display: inline-block;
     border-radius: .8rem;
@@ -40,21 +38,17 @@
       margin: -.3rem;
     }
   }
-
   &__mail {
     background: none;
     border: none;
     color: a.$cl-accent-100;
     font-size: 1.2rem;
     padding: 2rem;
-
     &:focus {
-      color:#ffffff;
+      color:a.$cl-accent-100;
       outline: none;
-    }
-    
+    } 
   }
-
   &__button {
     background: #2A42DE;
     border: none;
@@ -63,23 +57,21 @@
     height: 5.35rem;
     border-bottom-right-radius: .8rem;
     border-top-right-radius: .8rem;
-
     &:active {
       transform: translateX(.3rem);
     }
   }
+  &__para {
+    margin: 2rem 0;
+  }
 }
-
 .social {
   &__link {
-    display: flex;
-    flex-direction: row;
+    @include a.flex-row;
     gap: 3rem;
-
     &>li {
       display: flex;
-      justify-content: center;
-      align-items: center;
+      @include a.center;
       width: 4rem; height: 4rem;
       border-radius: 50%;
       background: linear-gradient(180deg, a.$cl-gr-500 20%, a.$cl-gr-550 100%);
@@ -89,6 +81,28 @@
       &::before {
         @include a.border;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .footer {
+    &__border {
+      flex-wrap: wrap;
+      margin: auto;
+      text-align: center;
+    }
+    &__details {
+      @include a.flex-column;
+      align-items: center;
+    }
+  }
+}
+
+@media screen and (max-width: 415px) {
+  .footer {
+    &__border {
+      flex-direction: column;
     }
   }
 }

@@ -4,8 +4,7 @@ section,footer {
   padding: 6rem 5.6rem;
 }
 .center {
-  justify-content: space-between;
-  align-items: center;
+  @include a.center;
 }
 .container {
   &__flex {
@@ -53,11 +52,11 @@ section,footer {
 }
 .market {
   &__des {
-    margin: auto;
-    text-align: center;    
+    text-align: center;  
   }
   &__button {
     @include a.flex-row;
+    justify-content: center;
     gap: 3.2rem;
     &>.btn {
       font-size: 1.6rem;
@@ -70,8 +69,18 @@ section,footer {
   }
   &__nft {
     padding: 2.4rem 1.8rem;
-    border: 1px solid hsl(0, 1%, 43%);
+    border: 1px solid a.$cl-bg-750;
     border-radius: 2rem;
+    cursor: pointer;
+    transition: all .5s;
+    &:hover {
+      transform: translateY(-.5rem);
+      border: transparent;
+      background: linear-gradient(180deg, a.$cl-bg-800 0%, a.$cl-bg-850 100%);
+    }
+    &>img {
+      width: 100%;
+    }
   }
   &__bid {
     @include a.flex-row;
@@ -91,15 +100,21 @@ section,footer {
   }
   &__div {
     @include a.grid-3;
-    gap: 2.2rem;
+    gap: 2rem;
+    margin: -2rem;
   }
   &__box {
-    padding: 2.8rem;
+    padding: 2rem;
     background: a.$cl-bg-900;
     @include a.in-box;
+    transition: all .5s;
     &::before {
       @include a.border;
     }
+    &:hover {
+      background: linear-gradient(89.48deg, a.$cl-gr-250 19.2%, a.$cl-gr-300 101.82%);
+      transform: translateY(-.5rem);
+    } 
   }
   &__icon {
     width: 6rem;
@@ -177,5 +192,115 @@ section,footer {
     font-size: a.$fs-300;
     font-weight: a.$fw-semibold;
     color: a.$cl-primary-100;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .hero {
+    &__img {
+      position: absolute;
+      width: 75%;
+      right: 0;
+      bottom: 15%;
+    }
+  }
+  .market {
+    &__sales {
+      @include a.grid-2;
+    }
+  }
+  .sell {
+    &__div {
+      @include a.grid-2;
+    }
+  }
+  .seller {
+    &__div {
+      @include a.grid-2;
+      margin-right: -5rem;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .seller {
+    &__name {
+      font-size: a.$fs-500;
+    }
+  }
+}
+
+@media screen and (max-width: 415px) {
+  section,footer {
+    padding: 1rem;
+  }
+
+  .hero {
+    &__text {
+      width: 160%;
+      text-align: center;
+    }
+    &__button {
+      flex-wrap: wrap;
+      @include a.center;
+      gap: 2rem;
+    }
+    &__fig {
+      display: none;
+    }
+    &__coin {
+      gap: 1rem;
+    }
+    &__icon-div {
+      font-size: a.$fs-300;
+      gap: .5rem;
+      
+    }
+  }
+  .market {
+    &__button {
+      flex-wrap: wrap;
+      @include a.center;
+      gap: 2rem;
+    }
+    &__sales {
+      @include a.grid-1;
+      margin: 4rem 0;
+    }
+  }
+  .sell {
+    &__div {
+      @include a.grid-1;
+      padding-left: 3.5rem;
+      margin-bottom: 5rem;
+    }
+    &__box {
+      padding: 1rem;
+      width: 90%;
+      text-align: center;
+    }
+  }
+  .seller {
+    &__div {
+      @include a.grid-1;
+      margin-right: -2rem;
+    }
+  }
+}
+
+@media screen and (width: 360px) {
+  .hero {
+    &__text {
+      width: 145%;
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .hero {
+    &__coin {
+      display: none;
+    }
   }
 }

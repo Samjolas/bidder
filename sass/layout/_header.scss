@@ -34,3 +34,19 @@ header {
   @include a.flex-row;
   align-items: center;
 }
+
+@media screen and (max-width: 415px) {
+  header {
+    padding: 2.4rem 1rem;
+  }
+  .cart {
+    margin-right: 1rem;
+  }
+  .button {
+    &>.btn {
+      width: 13rem;
+      height: 5rem;
+      font-size: a.$fs-200;
+    }
+  }
+}

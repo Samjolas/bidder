@@ -10,6 +10,11 @@
   flex-direction: column;
 }
 
+@mixin grid-1 {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
 @mixin grid-2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -37,3 +42,10 @@
   margin: -.1rem; 
   background: linear-gradient(180deg, a.$cl-gr-200, a.$cl-gr-350);
 }
+
+@mixin center {
+  justify-content: space-between;
+  align-items: center;
+}
+
+

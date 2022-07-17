@@ -6,6 +6,7 @@
   font-weight: a.$fw-bold;
   font-size: a.$fs-400;
   @include a.in-box;
+  transition: all .5s;
   &::before {
     @include a.border;
   }
@@ -15,7 +16,17 @@
   &--sub {
     background: a.$cl-bg-900;
   }
+  &:hover {
+    transform: translateY(-.5rem);
+    background: linear-gradient(95.39deg, a.$cl-gr-200 1.54%, a.$cl-gr-350 93.12%);
+  }
 }
 
-
+@media screen and (max-width: 415px) {
+  .btn {
+    width: 13rem;
+    height: 5rem;
+    font-size: a.$fs-200;
+  }
+}
 
