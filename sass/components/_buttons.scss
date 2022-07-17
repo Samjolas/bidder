@@ -20,6 +20,9 @@
     transform: translateY(-.5rem);
     background: linear-gradient(95.39deg, a.$cl-gr-200 1.54%, a.$cl-gr-350 93.12%);
   }
+  &:active {
+    transform: translateY(.5rem);
+  }
 }
 
 @media screen and (max-width: 415px) {
