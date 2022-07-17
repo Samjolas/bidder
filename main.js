@@ -1,1 +1,0 @@
-gsap.from ('.hero', {duration:6, x:400, opacity:0, ease:'elastic'});
